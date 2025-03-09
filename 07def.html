@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lesson 7 - Function exercises</h1>
+
+
+
+    <script>
+        function convertToFahrenheit(degree){
+            let Fa = (degree*9/5) + 32
+                console.log(Fa)
+        }
+
+        function convertToCelcius(degree){
+            let Ce = (degree- 32)*5/9
+                console.log(Ce)
+        }
+
+        function convertTemperature(degree, unit){
+
+        if(unit==='C'){
+            let Ce = (degree- 32)*5/9
+                console.log(Ce)
+        } else if(unit === 'F'){
+            let Fa = (degree*9/5) + 32
+                console.log(Fa)
+        } else{
+            console.log('please ')
+        }
+        }
+
+        convertToFahrenheit(25)
+        convertToCelcius(86)
+        convertTemperature(25,'F')
+        convertTemperature(86,'C')
+
+        
+    </script>
+</body>
+</html>
