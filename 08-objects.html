@@ -30,6 +30,8 @@
        console.log(typeof product)
         */
 
+
+        /*
         const product2 = {
             name: 'shirt',
             'delivery-time': '1 day',
@@ -58,12 +60,67 @@
         // Change jsObject to JSON using JSON.stringify
         console.log(JSON.stringify(product2))
 
-        
+
         const jsonString = JSON.stringify(product2)
         //Convert JASON file back to jsObject - using JSON.parse
         console.log(JSON.parse(jsonString))
+        */
+        
+        console.log('hello'.length)
+        console.log('hello'.toUpperCase())
+        console.log('hELLOo'.toLowerCase())
+
+        // Objects variables are stored in Computer's memory
+        // -> when calling a variable in an object, it's actually referencing the memory
+        const object1 = {
+            message: 'hello',
+        }
+        console.log(object1)
+
+        const object2 = object1
+        object1.message = 'Good Job'
+        console.log(object1)
+
+        console.log(object2)
+
+        //object 3 has its own reference
+        const object3 = {
+            message: 'Good Job'
+        }
+
+        console.log(object3 === object1)
+
+        //object2 and object1 has the same reference
+        console.log(object2 === object1)
+
+        const object4 = {
+            message: 'Good Job boi ',
+            price: 7.99
+        }
+        
+        //Destructing: taking a property out of a object
+        const {message, price} = object4
+        console.log(message)
+        console.log(price)
 
 
+        //shorthand property
+
+        const object5 = {
+            //message: message
+            message,
+            // method: function function1(){
+            //     console.log('method')
+            // }
+
+            //shorthand method syntax for the above -> function in object
+            method(){
+                console.log('method')
+            }
+        }
+
+        console.log(object5)
+        object5.method()
     </script>
 </body>
 </html>
