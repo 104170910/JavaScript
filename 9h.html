@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM projects</title>
+</head>
+<body>
+   <h1>9h</h1>
+    <input type="text" class="userInput" onkeyup="updateOutput()">
+    <p class="userOutput"> </p>
+    <script>
+
+
+       function updateOutput(){
+        const inputElement = document.querySelector('.userInput')
+        let outPut = inputElement.value
+        document.querySelector('.userOutput').innerHTML = `${outPut}`
+       }
+    </script>
+</body>
+</html>

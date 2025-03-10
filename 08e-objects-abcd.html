@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8e - objects</title>
+</head>
+<body>
+    <h1>8 exercises</h1>
+
+    <script>
+        const basketball ={
+            price: 2095,
+            'deliverytime': '3 days',
+        }
+
+        
+        console.log(basketball)
+
+        basketball.price += 500
+        console.log(basketball)
+
+        
+        const item1 ={
+            name: 'BlackShirt',
+            price: 1000
+        }
+        const item2 ={
+            name: 'WhiteShirt',
+            price: 1200
+        }
+
+        function comparePrice(product1, product2){
+            if(product1.price > product2.price){
+                console.log(`${product2.name} is cheaper and is ${product2.price}`)
+            } else if(product1.price < product2.price){
+                console.log(`${product1.name} is cheaper and is ${product1.price}`)
+            }
+        }
+        comparePrice(item1, item2)
+
+
+        // ex 8e
+        const item3 ={
+            name: 'WhiteShirt',
+            price: 1200
+        }
+        const item4 ={
+            name: 'WhiteShirt',
+            price: 1200
+        }
+        function isSameProduct(product1, product2){
+            if(product1.name === product2.name && product1.price === product2.price){
+                console.log('It is the same product')
+            } else{
+                console.log('It is not the same product')
+            }
+        }
+
+        isSameProduct(item3, item4)
+        isSameProduct(item1, item4)
+
+        let message = 'Hello Everyone'
+        console.log(message.toLowerCase())
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 exercises</title>
+</head>
+<body>
+    <h1>09 Document Object model</h1>
+    <button>9a</button>
+    <button class="button-9b" onclick="button2()">9b</button>
+    <br>
+    <p>next up</p>
+    <button onclick="checkCoin('heads')">heads</button>
+    <button onclick="checkCoin('tails')">tails</button>
+    <p class="coin"></p>
+
+
+    <p>next up</p>
+    <input type="text" class="name" placeholder="Name" onkeydown=" handleNameKeyDown(event)">
+    <button onclick="yourName()">Submit</button>
+    <p class="name-result"></p>
+
+
+    <script>       
+        function button2(){
+            const button2 = document.querySelector('.button-9b') 
+
+            if(button2.innerHTML === '9b'){
+                button2.innerHTML = '9b done'
+            } else if(button2.innerHTML === '9b done'){
+                button2.innerHTML = '9b'
+            }
+        }
+        
+        function checkCoin(event){
+            let result = ''
+            
+            if (event === 'heads'){
+                result = 'You chose heads'
+            } else if(event ==='tails'){
+                result = 'You chose tails'
+            }
+
+
+            document.querySelector('.coin').innerHTML =`${result}`
+        }
+        
+
+        function yourName(){
+            const userInput = document.querySelector('.name')
+            let userName = userInput.value
+
+            document.querySelector('.name-result').innerHTML = `Your name is ${userName}`
+        }
+
+        function handleNameKeyDown(event){
+            if(event.key === 'Enter'){
+                yourName()
+            }
+        }
+
+    </script>
+</body>
+</html>
